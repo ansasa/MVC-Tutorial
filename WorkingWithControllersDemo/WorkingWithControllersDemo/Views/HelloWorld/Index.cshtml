@@ -1,0 +1,29 @@
+﻿@model Authors
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+
+<h1>@ViewBag.Greetings</h1>
+
+<h1>@ViewBag.Company</h1>
+
+<h1>@ViewBag.Country</h1>
+
+<h1>Author details are as below</h1>
+
+<h1>@Model.Name</h1>
+<h1>@Model.Country</h1>
+
+
+<form asp-controller="HelloWorld" asp-action="GotoURL" method="post">
+
+    <label for="url">URL</label>
+    <input type="text" name="url" />
+
+    <input type="submit"/>
+
+</form>
