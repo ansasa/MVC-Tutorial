@@ -1,0 +1,20 @@
+name: My Learning Pipeline
+on:
+  push:
+    branches: [main]
+
+jobs:
+  check-my-code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download my code
+        uses: actions/checkout@v4
+
+      - name: Say Hello!
+        run: echo 'Hello from my pipeline! Code downloaded successfully.'
+
+      - name: List my files
+        run: ls -la
+
+      - name: Done
+        run: echo 'Pipeline completed successfully!'
